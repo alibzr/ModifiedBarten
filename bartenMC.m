@@ -1,6 +1,6 @@
 function output = bartenMC(u,e,L,D,k,eta0,sigma0,eg,u00)
 
-% Barten's model of CSF - Based on the fourth chapter https://doi.org/10.1117/3.353254
+% Original implementation of Barten's CSF model - Based on the fourth chapter https://doi.org/10.1117/3.353254
 % u: Frequency range in cpd
 % e: Eccentricity in degrees
 % L: Average luminance of the observed object in cd/m^2

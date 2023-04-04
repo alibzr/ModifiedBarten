@@ -1,6 +1,6 @@
 function output = bartenDetection(u,e,L,D,k,eta0,sigma0,eg,u00)
 
-% Barten's model of CSF - Based on the fourth chapter https://doi.org/10.1117/3.353254
+% Modified Barten CSF model for detection of luminance patterns, proposed by Bozorgian et al. (2022)
 % u: Frequency range in cpd
 % e: Eccentricity in degrees
 % L: Average luminance of the observed object in cd/m^2
@@ -19,9 +19,6 @@ Ngp0      = 0.05 * 36000;
 
 % Density of parasol Retinal ganglion cells as a function of eccentricity
 Ngp       = Ngp0 * (0.85/(1+(e/0.45)^2) + 0.15/(1+(e/eg)^2));
-
-% Density of cones as a function of eccentricity
-Nc        = Nc0 * (0.85/(1+(e/0.45)^2) + 0.124/(1+(e/6)^2) + 0.026);
 
 % constants for calculation of sigma based on pupil diameter
 Cab       = 0.08;
@@ -58,7 +55,6 @@ Y0        = X0;
 d         = 5 - 3 * tanh(0.4 * log10(L*(X0^2/(40^2))));
 
 % standard deviation of the line-spread function caused by the discrete sturcture of the retina (3600 converts degree to arcmin)
-% sigmaret  = 1/(sqrt(7.2 * sqrt(3) * Nc/3600));
 rc       = (0.45/30)*e + 0.25;
 sigmaret = rc/sqrt(18/5);
 
