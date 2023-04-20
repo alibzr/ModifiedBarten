@@ -9,13 +9,13 @@ function output = bartenMC(u,e,L,D,k,eta0,sigma0,eg,u00)
 % eta0: Constant for quantom efficiency
 % sigma0: Constant for the eye MTF
 % eg: Eccentricity constant (can be different for various subjects)
-% u00: Spatial frequency above which the lateral inhibition ceases as a function of eccentricity in Fovea
+% u00: Spatial frequency above which the lateral inhibition ceases in Fovea
 
 % Density of M-on Retinal ganglion cells in the fovea cells/deg^2
 Ng0       = 0.05 * 36000;
 
 % On-Center M Retinal ganglion cells density as a function of eccentricity
-Ng        = Ng0 * (0.85/(1+(e/0.45)^2) + 0.15/(1+(e/eg)^2));
+Ng        = Ng0 .* (0.85./(1+(e/0.45).^2) + 0.15./(1+(e/eg).^2));
 
 % constants for calculation of sigma based on pupil diameter
 Cab       = 0.08;
