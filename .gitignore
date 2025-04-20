@@ -49,6 +49,8 @@ ENV/
 *.mlappinstall
 *.mlpkginstall
 *.autosave
+*.DS_Store
+*.MATLABDriveTag
 
 # MATLAB crash dump
 matlab_crash_dump.*
