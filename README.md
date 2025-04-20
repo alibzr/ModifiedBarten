@@ -65,11 +65,11 @@ csf_pars_gabor = struct('s_frequency', s_frequency_gabor, 't_frequency', 8, 'ecc
 sensitivity_gabor = csf_model.sensitivity(csf_pars_gabor);
 
 % Plotting (example)
-% figure;
-% loglog(s_frequency_gabor, sensitivity_gabor);
-% xlabel('Spatial Frequency (cpd)');
-% ylabel('Sensitivity');
-% title('CSF for Gabor Stimulus');
+figure;
+loglog(s_frequency_gabor, sensitivity_gabor);
+xlabel('Spatial Frequency (cpd)');
+ylabel('Sensitivity');
+title('CSF for Gabor Stimulus');
 
 % --- Example for Disc stimuli ---
 % Define parameters for Disc
@@ -81,9 +81,8 @@ csf_pars_disc = struct('t_frequency', t_frequency_disc, 'eccentricity', 0, ...
 sensitivity_disc = csf_model.sensitivity_edge(csf_pars_disc);
 
 % Plotting (example)
-% figure;
-% loglog(t_frequency_disc, sensitivity_disc);
-% xlabel('Temporal Frequency (Hz)');
-% ylabel('Sensitivity');
-% title('CSF for Disc Stimulus');
-'''
+figure;
+oglog(t_frequency_disc, sensitivity_disc);
+xlabel('Temporal Frequency (Hz)');
+ylabel('Sensitivity');
+title('CSF for Disc Stimulus');
