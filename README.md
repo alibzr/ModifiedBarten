@@ -75,7 +75,7 @@ sensitivity_gabor = csf_model.sensitivity(csf_pars_gabor);
 % Define parameters for Disc
 t_frequency_disc = logspace(log10(0.1), log10(100), 500);
 csf_pars_disc = struct('t_frequency', t_frequency_disc, 'eccentricity', 0, ...
-                      'luminance', 100, 'ge_sigma', 1, 'vis_field', 0, 'stimulus_type', 'disc'); % stimulus_type is set internally by sensitivity_edge, but good practice to include
+                      'luminance', 100, 'ge_sigma', 1, 'vis_field', 0, 'stimulus_type', 'disc');
 
 % Calculate sensitivity for Disc (using sensitivity_edge)
 sensitivity_disc = csf_model.sensitivity_edge(csf_pars_disc);
@@ -85,8 +85,10 @@ sensitivity_disc = csf_model.sensitivity_edge(csf_pars_disc);
 % loglog(t_frequency_disc, sensitivity_disc);
 % xlabel('Temporal Frequency (Hz)');
 % ylabel('Sensitivity');
-% title('CSF for Disc Stimulus (CFF prediction)');'''
+% title('CSF for Disc Stimulus');
+'''
 
+### Basic Usage (Python)
 '''python
 import numpy as np
 from csf_barten_hf import CSF_Barten_HF
@@ -116,7 +118,7 @@ sensitivity_gabor = csf_model.sensitivity(csf_pars_gabor)
 # Define parameters for Disc
 t_frequency_disc = np.logspace(np.log10(0.1), np.log10(100), 500)
 csf_pars_disc = {'t_frequency': t_frequency_disc, 'eccentricity': 0,
-                  'luminance': 100, 'ge_sigma': 1, 'vis_field': 0, 'stimulus_type': 'disc'} # stimulus_type is set internally by sensitivity_edge, but good practice to include
+                  'luminance': 100, 'ge_sigma': 1, 'vis_field': 0, 'stimulus_type': 'disc'}
 
 # Calculate sensitivity for Disc (using sensitivity_edge)
 sensitivity_disc = csf_model.sensitivity_edge(csf_pars_disc)
@@ -126,6 +128,6 @@ sensitivity_disc = csf_model.sensitivity_edge(csf_pars_disc)
 # plt.loglog(t_frequency_disc, sensitivity_disc)
 # plt.xlabel('Temporal Frequency (Hz)')
 # plt.ylabel('Sensitivity')
-# plt.title('CSF for Disc Stimulus (CFF prediction)')
+# plt.title('CSF for Disc Stimulus')
 # plt.show()
 '''
