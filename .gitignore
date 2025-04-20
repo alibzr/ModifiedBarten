@@ -1,0 +1,73 @@
+# === General ===
+.DS_Store
+Thumbs.db
+*.log
+*.bak
+*.tmp
+*.swp
+*.swo
+*.~*
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+env/
+venv/
+ENV/
+*.ipynb_checkpoints/
+.mypy_cache/
+.pytest_cache/
+.coverage
+.tox/
+.hypothesis/
+.cache/
+*.spec
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+
+# === MATLAB ===
+*.asv
+*.m~
+*.mlx~
+*.fig
+*.mat
+*.mex*
+*.slxc
+*.slx
+*.mdl
+*.p
+*.mlappinstall
+*.mlpkginstall
+*.autosave
+
+# MATLAB crash dump
+matlab_crash_dump.*
+
+# Simulink code generation
+slprj/
+sfunctools/
+codegen/
+work/
+simulink_cache/
+*.rpt
+
+# MATLAB App Designer
+*.mlapp
+
+# === OS / IDE specific ===
+*.idea/
+*.sublime-*
+*.iml
+*.project
+*.workspace
+*.tmproj
